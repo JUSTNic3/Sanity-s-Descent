@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: rgb(199, 54, 54);
+}
+
+.story-header {
+    height: 20em; 
+    background-image: url('images/asylum.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 5px black;
+}
+
+.story-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.story-content {
+    padding: 80px 20px;
+    background-color: #1c1c1c;
+    color: #ddd;
+    text-align: left;
+    margin: 0 auto;
+    display:flex;
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact-us {
+    background-color: #101010;
+    color: #aaa;
+    text-align: center;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-us p{
+    margin-top: 1em;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.logo-container {
+    flex: 1;
+    text-align: right; 
+}
+
+.logo-container img {
+    max-width: 10em; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .logo-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .logo-container img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .story-header h5 {
+        font-size: 1.2rem;
+    }
+
+    .story-content {
+        padding: 40px 20px;
+    }
+
+    .story-content p {
+        font-size: 1rem;
+    }
+}

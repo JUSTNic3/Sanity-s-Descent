@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: rgb(199, 54, 54);
+}
+
+.title-screen {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/office.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+.title-screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.title-screen h1 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; 
+    background-color: #1c1c1c; 
+    color: #ddd;
+    flex-wrap: wrap;
+}
+
+.home-text {
+    text-align: left;
+    flex: 1;
+    margin-left: 2em;
+    margin-right: 10em;
+}
+
+.home-text p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2em;
+}
+
+.home-image img {
+    max-width: 50em;
+    height: auto;
+    flex: 1;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.contact-us {
+    background-color: #101010;
+    color: #aaa;
+    text-align: center;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.logo-container {
+    flex: 1;
+    text-align: right; 
+}
+
+.logo-container img {
+    max-width: 10em; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .logo-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .logo-container img {
+        max-width: 150px;
+    }
+
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-text {
+        text-align: center;
+    }
+}

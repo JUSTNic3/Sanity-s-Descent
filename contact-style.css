@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: rgb(199, 54, 54);
+}
+
+.contact-header {
+    height: 23em; 
+    background-image: url('images/fnaf.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 5px black;
+}
+
+.contact-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact-us {
+    background-color: #101010;
+    color: #aaa;
+    text-align: center;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 3em 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.logo-container {
+    flex: 1;
+    text-align: right; 
+}
+
+.logo-container img {
+    max-width: 20em; 
+    height: auto;
+}
+
+.contact-form {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-form h2 {
+    margin-bottom: 1.5em;
+    color: #fff;
+}
+
+.contact-form label{
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: rgb(199, 54, 54);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: rgb(255, 80, 80);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        text-align: center;
+    }
+
+    .logo-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .logo-container img {
+        max-width: 150px;
+    }
+}

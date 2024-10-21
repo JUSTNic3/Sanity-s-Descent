@@ -8,11 +8,12 @@
 body, html {
     height: 100%;
     color: white;
+    background-color: black;
     text-align: center;
 }
 
 .navbar {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -38,9 +39,50 @@ body, html {
 }
 
 .navbar ul li a:hover, .navbar ul li a.active {
-    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     color: rgb(199, 54, 54);
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        color: white;
+    }
+
+    .navbar.menu-open ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 601px) {
+    .menu-toggle {
+        display: none;
+    }
 }
 
 .gameplay-header {
@@ -61,12 +103,15 @@ body, html {
 }
 
 .gameplay-content {
-    padding: 80px 20px;
+    padding: 40px 20px;
     background-color: #1c1c1c;
     color: #ddd;
     text-align: left;
     margin: 0 auto;
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .gameplay-content p {
@@ -74,6 +119,12 @@ body, html {
     line-height: 1.8;
     margin-bottom: 20px;
     margin-left: 2em;
+    max-width: 100%
+}
+
+.gameplay-content iframe {
+    max-width: 100%;
+    height: auto;
 }
 
 .contact-us {
@@ -88,9 +139,10 @@ body, html {
     background-position: center;
 }
 
-.contact-us p{
+.contact-us p {
     margin-top: 1em;
 }
+
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -131,22 +183,32 @@ body, html {
     .logo-container img {
         max-width: 150px;
     }
-}
 
-@media (max-width: 768px) {
     .gameplay-header h1 {
-        font-size: 2.5rem;
-    }
-
-    .gameplay-header h5 {
-        font-size: 1.2rem;
+        font-size: 2.5rem; 
     }
 
     .gameplay-content {
         padding: 40px 20px;
+        flex-direction: column;
     }
 
     .gameplay-content p {
-        font-size: 1rem;
+        font-size: 1rem; 
+        margin-left: 0; 
+        padding: 0 1em;
+    }
+    .navbar ul li {
+        margin: 10 0px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .gameplay-header h1 {
+        font-size: 8vw; 
+    }
+
+    .navbar ul li {
+        margin: 10 0px;
     }
 }

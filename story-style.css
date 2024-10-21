@@ -121,21 +121,21 @@ body, html {
     text-align: left;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* Ensures content wraps when needed */
-    justify-content: center; /* Align items to the center */
-    max-width: 100%; /* Ensure it doesn't overflow the page */
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .story-content p {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    max-width: 100%; /* Prevents text overflow */
+    max-width: 100%;
 }
 
 .story-content img {
-    max-width: 100%; /* Ensures images are responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
     margin: 1em 0;
 }
 

@@ -13,7 +13,7 @@ body, html {
 }
 
 .navbar {
-    position: fixed;
+    position:relative;
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -42,6 +42,35 @@ body, html {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     color: rgb(199, 54, 54);
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        display: none;
+    }
+    .navbar {
+        text-align: right;
+        padding-right: 20px;
+    }
+    .navbar .menu-toggle {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+}
+
+.menu-open .navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .title-screen {
@@ -98,12 +127,10 @@ body, html {
 }
 
 .home-image img {
-    max-width: 50em;
+    max-width: 100%;
     height: auto;
     flex: 1;
-    margin-right: 2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 2em;
 }
 
 .contact-us {
@@ -141,15 +168,15 @@ body, html {
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
     }
 
     .contact-info {
-        text-align: center;
+        text-align: left;
     }
 
     .logo-container {
-        text-align: center;
+        text-align: left;
         margin-top: 20px;
     }
 
@@ -159,10 +186,28 @@ body, html {
 
     .home-content {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
 
     .home-text {
-        text-align: center;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-text {
+        margin: 1em;
+    }
+
+    .home-image img {
+        margin: 1em;
+    }
+
+    .title-screen h1 {
+        font-size: 8vw;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
     }
 }

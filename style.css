@@ -13,7 +13,7 @@ body, html {
 }
 
 .navbar {
-    position:relative;
+    position: relative;
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -48,14 +48,30 @@ body, html {
     .navbar ul {
         display: none;
     }
+
     .navbar {
         text-align: right;
         padding-right: 20px;
     }
+
     .navbar .menu-toggle {
         display: block;
         font-size: 2em;
         cursor: pointer;
+        color: white;
+    }
+
+    .navbar.menu-open ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
     }
 }
 
@@ -64,17 +80,14 @@ body, html {
     color: white;
 }
 
-.menu-open .navbar ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+@media (min-width: 601px) {
+    .menu-toggle {
+        display: none;
+    }
 }
 
 .title-screen {
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,8 +120,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; 
-    background-color: #1c1c1c; 
+    gap: 40px;
+    background-color: #1c1c1c;
     color: #ddd;
     flex-wrap: wrap;
 }
@@ -120,7 +133,7 @@ body, html {
     margin-right: 10em;
 }
 
-.home-text p{
+.home-text p {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 2em;
@@ -157,12 +170,30 @@ body, html {
 
 .logo-container {
     flex: 1;
-    text-align: right; 
+    text-align: right;
 }
 
 .logo-container img {
-    max-width: 10em; 
+    max-width: 10em;
     height: auto;
+}
+
+@media (max-width: 1280px) {
+    .home-text {
+        margin: 1em;
+    }
+
+    .home-image img {
+        margin: 0.1em;
+    }
+
+    .title-screen h1 {
+        font-size: 8vw;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -191,6 +222,10 @@ body, html {
 
     .home-text {
         text-align: left;
+    }
+
+    .home-image img {
+        margin: 0.1em;
     }
 }
 

@@ -39,7 +39,6 @@ body, html {
 }
 
 .navbar ul li a:hover, .navbar ul li a.active {
-    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     color: rgb(199, 54, 54);
 }
@@ -178,23 +177,6 @@ body, html {
     height: auto;
 }
 
-@media (max-width: 1280px) {
-    .home-text {
-        margin: 1em;
-    }
-
-    .home-image img {
-        margin: 0.1em;
-    }
-
-    .title-screen h1 {
-        font-size: 8vw;
-    }
-
-    .navbar ul li {
-        margin: 0 10px;
-    }
-}
 
 @media (max-width: 768px) {
     .contact-container {
@@ -227,6 +209,9 @@ body, html {
     .home-image img {
         margin: 0.1em;
     }
+    .navbar ul li {
+        margin: 10px 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -243,6 +228,6 @@ body, html {
     }
 
     .navbar ul li {
-        margin: 0 10px;
+        margin: 10 10px;
     }
 }
